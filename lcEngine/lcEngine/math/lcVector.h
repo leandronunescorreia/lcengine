@@ -2,12 +2,12 @@
 #define LCVECTOR
 
 template<typename T>
-class LCVector
+class lcVector
 {
 	public:
-		LCVector() : x((T)0), y((T)0), z((T)0), w((T)0);
-		LCVector(T X, T Y, T Z, T W) : x((T)X), y((T)Y), z((T)Z), w((T)W);
-		~LCVector() {delete this};
+		lcVector() : x((T)0), y((T)0), z((T)0), w((T)0);
+		lcVector(T X, T Y, T Z, T W) : x((T)X), y((T)Y), z((T)Z), w((T)W);
+		~lcVector() {delete this};
 
 		getX(return x;) const;
 		getY(return y;) const;
@@ -17,4 +17,4 @@ class LCVector
 		T x, y, z, w;
 };
 
-#endif !LCVECTOR
+#endif //!LCVECTOR
