@@ -1,20 +1,21 @@
-#ifndef LCVECTOR
-#define LCVECTOR
+#ifndef LCVECfloatOR
+#define LCVECfloatOR
 
-template<typename T>
-class lcVector
+#include "..\interfaces\IVector.h"
+
+class lcVector : public IVector
 {
 	public:
-		lcVector() : x((T)0), y((T)0), z((T)0), w((T)0);
-		lcVector(T X, T Y, T Z, T W) : x((T)X), y((T)Y), z((T)Z), w((T)W);
-		~lcVector() {delete this};
+		lcVector() : x(0), y(0), z(0), w(0) {}
+		lcVector(float X, float Y, float Z, float W) : x(X), y(Y), z(Z), w(W) {}
+		~lcVector() { delete this; }
 
-		getX(return x;) const;
-		getY(return y;) const;
-		getZ(return z;) const;
-		getW(return w) const;
+		float getX() const { return x; }
+		float getY() const { return y; }
+		float getZ() const { return z; }
+		float getW() const { return w; }
 	private:
-		T x, y, z, w;
+		float x, y, z, w;
 };
 
-#endif //!LCVECTOR
+#endif //!LCVECfloatOR
